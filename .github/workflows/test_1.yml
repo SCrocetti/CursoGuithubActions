@@ -1,0 +1,16 @@
+# nombre del workflow
+name: Hola mundo
+# marque que evento/s dispararan el workflow
+on: [push]
+
+jobs:
+  # nombre del job
+  saludar:
+    # en que corre
+    runs-on: ubuntu-latest
+    # pasos del job
+    steps:
+      # nombre del paso
+      - name: saludar
+        # correr comando
+        run: echo "Hola mundo"
