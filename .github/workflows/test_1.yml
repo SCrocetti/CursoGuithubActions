@@ -1,5 +1,5 @@
 # nombre del workflow
-name: Hola mundo
+name:  Paralel Jobs
 # marque que evento/s dispararan el workflow
 on: [push]
 
