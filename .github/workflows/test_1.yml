@@ -14,3 +14,12 @@ jobs:
       - name: saludar
         # correr comando
         run: echo "Hola mundo"
+  other:
+    # en que corre
+    runs-on: ubuntu-latest
+    # pasos del job
+    steps:
+      # nombre del paso
+      - name: LS
+        # correr comando
+        run: ls -al
