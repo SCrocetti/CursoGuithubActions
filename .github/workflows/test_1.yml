@@ -1,5 +1,5 @@
 # nombre del workflow
-name:  Paralel Jobs
+name:  Multiple steps
 # marque que evento/s dispararan el workflow
 on: [push]
 
@@ -14,6 +14,12 @@ jobs:
       - name: saludar
         # correr comando
         run: echo "Hola mundo"
+      - name: touch file
+        run: touch hola.txt
+      - name: set text
+        run: echo "Hola mundo" >> hola.txt
+      - name: read file
+        run: cat hola.txt
   other:
     # en que corre
     runs-on: ubuntu-latest
