@@ -1,7 +1,13 @@
 # nombre del workflow
 name:  Interdependent jobs
 # marque que evento/s dispararan el workflow
-on: [push]
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   # nombre del job
