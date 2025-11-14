@@ -23,6 +23,8 @@ jobs:
   other:
     # en que corre
     runs-on: ubuntu-latest
+    # indica que depende de otro job tambien lo podes definir como array [saludar,...]
+    needs: saludar
     # pasos del job
     steps:
       # nombre del paso
