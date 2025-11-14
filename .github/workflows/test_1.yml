@@ -1,5 +1,5 @@
 # nombre del workflow
-name:  Multiple steps
+name:  Interdependent jobs
 # marque que evento/s dispararan el workflow
 on: [push]
 
