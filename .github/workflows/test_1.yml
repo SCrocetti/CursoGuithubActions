@@ -1,5 +1,5 @@
 # nombre del workflow
-name:  Instalacion de paquetes
+name:  Instalacion de paquetes usando actions
 # marque que evento/s dispararan el workflow
 on: [push]
 
@@ -13,9 +13,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5.0.0
       # nombre del paso
-      - name: runScript
-        # correr comando
-        # el | permite correr comandos multilinea
-        run: |
-          chmod +x script.sh
-          ./script.sh
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v6.0.0
+        # parametros que se pasan al action a usar
+        with:
+          node-version: latest
+      - name: node version
+        run: node --version
+      - name: Setup PHP Action
+        uses: shivammathur/setup-php@2.35.5
+        with: 
+          php-version: '8.4'
+      - name: php version
+        run: php --version
