@@ -1,5 +1,5 @@
 # nombre del workflow
-name:  Interdependent jobs
+name:  Checkout action test
 # marque que evento/s dispararan el workflow
 on: 
   push:
@@ -33,6 +33,9 @@ jobs:
     needs: saludar
     # pasos del job
     steps:
+      # conecta al github workspace
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
       # nombre del paso
       - name: LS
         # correr comando
